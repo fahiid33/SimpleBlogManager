@@ -1,5 +1,5 @@
 {
-  "name": "simpleblogmanager",
+  "name": "nextjs-fullstack-blog-2023",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,22 +9,23 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@prisma/client": "^5.14.0",
-    "@types/bcryptjs": "^2.4.6",
-    "@types/next-auth": "^3.15.0",
-    "next": "14.2.3",
-    "next-auth": "^4.24.7",
-    "react": "^18",
-    "react-dom": "^18",
-    "swr": "^2.2.5"
-  },
-  "devDependencies": {
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "postcss": "^8",
-    "prisma": "^5.14.0",
-    "tailwindcss": "^3.4.1",
-    "typescript": "^5"
+    "@prisma/client": "^5.3.1",
+    "@types/node": "20.6.4",
+    "@types/react": "18.2.22",
+    "@types/react-dom": "18.2.7",
+    "autoprefixer": "10.4.16",
+    "encoding": "^0.1.13",
+    "firebase": "^10.4.0",
+    "next": "13.5.2",
+    "next-auth": "^4.23.1",
+    "next-themes": "^0.2.1",
+    "postcss": "8.4.30",
+    "prisma": "^5.3.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-icons": "^4.11.0",
+    "react-loader-spinner": "^5.4.5",
+    "tailwindcss": "3.3.3",
+    "typescript": "5.2.2"
   }
 }
