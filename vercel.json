@@ -1,0 +1,19 @@
+{
+    "build": {
+      "env": {
+        "DATABASE_URL": "postgresql://admin:admin321@localhost:5432/mydb?schema=public",
+        "NEXTAUTH_URL": "http://localhost:3000",
+        "NEXTAUTH_SECRET": "default_secret_key",
+        "GITHUB_CLIENT_ID": "Iv23liGJG4bliN4r7CbB",
+        "GITHUB_CLIENT_SECRET": "6f90326e8292b034d6882fec6e10e972427fe1f7",
+        "FIREBASE_API_KEY": "AIzaSyDNqlTpb1qmAwfwN-CxrWuXQTDMOWNfSSw",
+        "FIREBASE_AUTH_DOMAIN": "blogmanager-ae510.firebaseapp.com",
+        "FIREBASE_PROJECT_ID": "blogmanager-ae510",
+        "FIREBASE_STORAGE_BUCKET": "blogmanager-ae510.appspot.com",
+        "FIREBASE_MESSAGING_SENDER_ID": "61899704848",
+        "FIREBASE_APP_ID": "1:61899704848:web:7a36e632874cf70bb85895"
+      }
+    },
+    "buildCommand": "npm run build && npx prisma generate"
+  }
+  
