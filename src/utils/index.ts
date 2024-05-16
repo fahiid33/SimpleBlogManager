@@ -1,4 +1,7 @@
 import { FormControlItem, MenuItem, Option } from "./types";
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+
 
 export const menuItems: MenuItem[] = [
   {
@@ -74,14 +77,22 @@ export const formControls: FormControlItem[] = [
 ];
 
 export const firebaseConfig = {
-  apiKey: "AIzaSyBlCooWO0lmd0JNEgeAfI2aCs1tA3hZNo8",
-  authDomain: "blog-app-97d34.firebaseapp.com",
-  projectId: "blog-app-97d34",
-  storageBucket: "blog-app-97d34.appspot.com",
-  messagingSenderId: "980489662763",
-  appId: "1:980489662763:web:56af6495955d00bed7d56e",
-  measurementId: "G-D8QK3X4RR6"
+
+  apiKey: "AIzaSyDNqlTpb1qmAwfwN-CxrWuXQTDMOWNfSSw",
+  authDomain: "blogmanager-ae510.firebaseapp.com",
+  projectId: "blogmanager-ae510",
+  storageBucket: "blogmanager-ae510.appspot.com",
+  messagingSenderId: "61899704848",
+  appId: "1:61899704848:web:7a36e632874cf70bb85895",
+  measurementId: "G-SPDSPWDPM9"
+
 };
+
+
+// Initialize Firebase
+
+// const app = initializeApp(firebaseConfig);
+// const analytics = getAnalytics(app);
 
 export const initialBlogFormData = {
  title :  '',
@@ -89,3 +100,5 @@ export const initialBlogFormData = {
  image : '',
  category : '' 
 }
+
+

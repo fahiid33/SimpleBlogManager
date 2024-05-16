@@ -16,6 +16,7 @@ async function extractBlogDetails(id: string) {
   );
 
   const data = await res.json();
+  console.log(data, "data1234444");
 
   if (data.success) return data.data;
 }

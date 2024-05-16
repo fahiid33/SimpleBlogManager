@@ -17,7 +17,7 @@ import { useRouter } from "next/navigation";
 import React, { useContext, useState } from "react";
 
 const app = initializeApp(firebaseConfig);
-const stroage = getStorage(app, "gs://blog-app-97d34.appspot.com");
+const stroage = getStorage(app, "gs://blogmanager-ae510.appspot.com");
 
 function createUniqueFileName(fileName: string) {
   const timeStamp = Date.now();

@@ -1,8 +1,11 @@
 {
-  "/not-found": "app/not-found.js",
   "/page": "app/page.js",
-  "/search/page": "app/search/page.js",
+  "/create/page": "app/create/page.js",
   "/blogs/page": "app/blogs/page.js",
+  "/search/page": "app/search/page.js",
   "/category/[id]/page": "app/category/[id]/page.js",
-  "/api/auth/[...nextauth]/route": "app/api/auth/[...nextauth]/route.js"
+  "/api/category/route": "app/api/category/route.js",
+  "/api/auth/[...nextauth]/route": "app/api/auth/[...nextauth]/route.js",
+  "/api/blog-post/get-all-posts/route": "app/api/blog-post/get-all-posts/route.js",
+  "/api/blog-post/add-post/route": "app/api/blog-post/add-post/route.js"
 }
