@@ -39,6 +39,7 @@ Welcome to the Blog Manager Application! This full-stack application is built wi
 - Node.js
 - PostgreSQL
 - Firebase account
+- Github account for CUD operations (Ceate, Update, Delete) 
 
 ### Installation
 

@@ -39,10 +39,15 @@ export default function Search() {
       method: "DELETE",
       cache: "no-store",
     });
+    
 
     const data = await res.json();
 
     if (data && data.success) helperFuncToFetchSearchResults(searchQuery);
+  }
+  async function handleEdit(id: number) {
+    console.log("id in handle ediit ", id);
+    router.push(`/edit?id=${id}`);
   }
 
   return (
@@ -87,6 +92,7 @@ export default function Search() {
                     >
                       <SingleBlog
                         handleDelete={handleDelete}
+                        handleEdit={handleEdit}
                         blogItem={searchBlogItem}
                       />
                     </div>
