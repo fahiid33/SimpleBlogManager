@@ -29,6 +29,10 @@ export default function BlogList({ lists }: { lists: Blog[] }) {
 
     if (data && data.success) router.refresh();
   }
+  async function handleEdit(id: number) {
+    console.log("id in handle ediit ", id);
+    router.push(`/edit?id=${id}`);
+  }
 
   return (
     <section className="pt-[120px] pb-[120px]">
@@ -37,8 +41,9 @@ export default function BlogList({ lists }: { lists: Blog[] }) {
           {lists && lists.length
             ? lists.map((listItem: Blog) => (
                 <div className="px-4" key={listItem.id}>
-                  <SingleBlog handleDelete={handleDelete} blogItem={listItem} />
+                  <SingleBlog handleDelete={handleDelete} handleEdit={handleEdit} blogItem={listItem} />
                 </div>
+                
               ))
             : null}
         </div>

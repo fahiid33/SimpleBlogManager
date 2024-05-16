@@ -3,13 +3,17 @@ import { useSession } from "next-auth/react";
 import Image from "next/image";
 import Link from "next/link";
 import { FaTrash } from "react-icons/fa";
+import { FaUserEdit } from "react-icons/fa";
+import {FaEdit} from "react-icons/fa";
 
 export default function SingleBlog({
   blogItem,
   handleDelete,
+  handleEdit,
 }: {
   blogItem: Blog;
   handleDelete: (id: number) => {};
+  handleEdit: (id: number) => {};
 }) {
   const { image, category, title, description, userimage, userid, id } =
     blogItem;
@@ -56,12 +60,19 @@ export default function SingleBlog({
                 {userid.split("_")[0].toUpperCase()}
               </p>
             </div>
-            <div>
+            <div className="flex">
               {session !== null && session?.user?.name === userid ? (
                 <FaTrash
                   onClick={() => handleDelete(id)}
                   size={30}
                   className="cursor-pointer"
+                />
+              ) : null}
+              {session !== null && session?.user?.name === userid ? (
+                <FaEdit
+                  onClick={() => handleEdit(id)}
+                  size={30}
+                  className="cursor-pointer ml-4"
                 />
               ) : null}
             </div>

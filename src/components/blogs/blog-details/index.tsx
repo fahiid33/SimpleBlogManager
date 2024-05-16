@@ -9,7 +9,6 @@ import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
 export default function BlogDetailsHome({ blogData }: { blogData: Blog }) {
-  console.log("blogDataaaaaaaa");
   console.log(blogData, "blogData");
 
   const [comment, setComment] = useState<string>("");

@@ -49,14 +49,15 @@ export default function Header() {
       >
         <div className="container">
           <div className="relative -mx-4 flex items-center justify-between">
-            <div className="w-60 max-w-full px-4 xl:mr-12">
+            <div className="w-60 max-w-full px-4 xl:mr-12 flex items-center">
               <Link
                 href={"/"}
-                className={`text-[30px] font-extrabold cursor-pointer block w-full
+                className={`text-[30px] font-extrabold cursor-pointer block
                     ${sticky ? "py-5 lg:py-2" : "py-8"}
                     `}
               >
-                BlogManager
+                <span className="mr-2">Blog</span>
+                <span className="mr-2">Manager</span>
               </Link>
             </div>
             <div className="flex w-full items-center justify-between px-4">

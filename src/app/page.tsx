@@ -16,7 +16,7 @@ export default function Home() {
                   NextJs Bolg Manager website using postgres with prisma ORM
                 </h1>
                 <p className="mb-12 text-base font-medium !leading-relaxed text-body-color dark:text-white dark:opacity-90 sm:text-lg md:text-xl">
-                  A full stack web application that allows users to create, read, update, and delete blog posts.
+                  A full stack web application that allows users to create, read, update, delete and add comment to blog posts.
                 </p>
               </div>
               <div className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
