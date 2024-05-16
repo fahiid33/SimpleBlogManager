@@ -2,13 +2,9 @@
   "/page": "app/page.js",
   "/blogs/page": "app/blogs/page.js",
   "/search/page": "app/search/page.js",
-  "/edit/page": "app/edit/page.js",
-  "/create/page": "app/create/page.js",
   "/blogs/[id]/page": "app/blogs/[id]/page.js",
   "/category/[id]/page": "app/category/[id]/page.js",
-  "/api/category/route": "app/api/category/route.js",
   "/api/auth/[...nextauth]/route": "app/api/auth/[...nextauth]/route.js",
   "/api/blog-post/get-all-posts/route": "app/api/blog-post/get-all-posts/route.js",
-  "/api/blog-post/blog-details/route": "app/api/blog-post/blog-details/route.js",
-  "/api/blog-post/update-post/route": "app/api/blog-post/update-post/route.js"
+  "/api/blog-post/blog-details/route": "app/api/blog-post/blog-details/route.js"
 }
