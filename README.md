@@ -47,33 +47,42 @@ Welcome to the Blog Manager Application! This full-stack application is built wi
 ```bash
 git clone https://github.com/your-username/blog-manager.git
 cd blog-manager
+```
 
-    Install dependencies:
+2. Install dependencies:
 
-bash
+```bash
 
 npm install
+```
 
 This will install all the necessary dependencies for the project.
 
-    Set up environment variables:
+3. Set up environment variables:
 
 Create a .env file in the root directory and add the following variables:
 
-env
+```bash
 
-DATABASE_URL="postgresql://YOUR_USERNAME:YOUR_PASSWORD@localhost:5432/mydb?schema=public"
+.env: 
+
+DATABASE_URL="postgresql://YOUR_DB_USERNAME:YOUR_DB_USER_PASSWORD@localhost:5432/mydb?schema=public"
 URL = "http://localhost:3000"
 
-3. Set up the Prisma schema:
+```
 
-bash
+4. Set up the Prisma schema:
+
+```bash
 
 npx prisma migrate dev --name init
 npx prisma generate
+```
 
-Run the application:
+5. Run the application:
 
-bash
+```bash
 
 npm run dev
+
+```
