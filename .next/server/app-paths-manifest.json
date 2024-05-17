@@ -1,0 +1,9 @@
+{
+  "/page": "app/page.js",
+  "/blogs/page": "app/blogs/page.js",
+  "/create/page": "app/create/page.js",
+  "/api/blog-post/get-all-posts/route": "app/api/blog-post/get-all-posts/route.js",
+  "/api/blog-post/delete-post/route": "app/api/blog-post/delete-post/route.js",
+  "/api/auth/[...nextauth]/route": "app/api/auth/[...nextauth]/route.js",
+  "/api/blog-post/add-post/route": "app/api/blog-post/add-post/route.js"
+}
