@@ -30,18 +30,20 @@ Welcome to the Blog Manager Application! This full-stack application is built wi
 - Next.js: For both front-end and back-end development.
 - PostgreSQL: Database management, interfaced with Prisma ORM.
 - Firebase: For image storage.
-- Docker: (in progress).
 
 ## Getting Started
 
 ### Prerequisites
 
 - Node.js
-- PostgreSQL
-- Firebase account
+- PostgreSQL and Prisma
 - Github account for CUD operations (Ceate, Update, Delete) 
 
 ### Installation
+
+
+Follow the steps below to set up and run the application:
+
 
 1. Clone the repository:
 
@@ -59,31 +61,96 @@ npm install
 
 This will install all the necessary dependencies for the project.
 
-3. Set up environment variables:
+
+3. installing Prisma ORM (if it's not already installed).
+
+```bash
+npm install -g prisma
+```
+
+4. Install PostgreSQL
+
+install PostgreSQL on your local machine if it's not already installed.
+
+Ubuntu:
+
+```bash
+
+sudo apt update
+sudo apt install postgresql postgresql-contrib
+```
+
+Mac (using Homebrew):
+
+```bash
+
+brew install postgresql
+```
+5. Create Database and User
+
+If you are not using Docker, you need to manually create the database and user in PostgreSQL:
+
+Switch to the PostgreSQL user:
+
+```bash
+
+sudo -i -u postgres
+```
+
+Open the PostgreSQL prompt:
+
+```bash
+
+psql
+
+```
+
+Create the database and user, and grant the user access to the database:
+
+sql
+```sql
+
+CREATE DATABASE mydb;
+CREATE USER new_user WITH ENCRYPTED PASSWORD 'newuser123';
+GRANT ALL PRIVILEGES ON DATABASE mydb TO new_user;
+```
+
+Exit the PostgreSQL prompt:
+
+```sql
+\q
+
+```
+
+Exit the PostgreSQL user:
+
+```bash
+exit
+```
+
+6. Generate the Prisma Client and Migrate the Prisma schema
+
+```bash
+prisma generate
+prisma migrate dev --name init
+```
+7. Set up environment variables
 
 Create a .env file in the root directory and add the following variables:
 
 ```bash
-
-.env: 
-
-DATABASE_URL="postgresql://YOUR_DB_USERNAME:YOUR_DB_USER_PASSWORD@localhost:5432/mydb?schema=public"
+DATABASE_URL="postgresql://new_user:newuser123@localhost:5432/mydb?schema=public"
 URL = "http://localhost:3000"
-
 ```
 
-4. Set up the Prisma schema:
 
-```bash
-
-npx prisma migrate dev --name init
-npx prisma generate
-```
-
-5. Run the application:
+8. Finally run the application:
 
 ```bash
 
 npm run dev
 
 ```
+Access the application: Once the application is running, you can access it at http://localhost:3000.
+
+For any issues or contributions, feel free to open a pull request or issue on the repository.
