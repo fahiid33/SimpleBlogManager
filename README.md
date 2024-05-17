@@ -161,14 +161,20 @@ If the cloning process is slow, you can try a shallow clone to only fetch the la
 
 ```bash
 
-        git clone --depth 1 https://github.com/fahiid33/SimpleBlogManager.git 
+git clone --depth 1 https://github.com/fahiid33/SimpleBlogManager.git 
+
 ```
+### Database Connection Issues:
 
-  ### Database Connection Issues:
-        Ensure PostgreSQL is running and accessible. If using Docker, verify that the container is up and the port is correctly mapped.
 
-  ### Environment Variables:
-        Double-check the .env file for correct database connection details.
+Ensure PostgreSQL is running and accessible. If using Docker, verify that the container is up and the port is correctly mapped.
+
+
+
+### Environment Variables:
+
+Double-check the .env file for correct database connection details.
+
 
 
 For any issues or contributions, feel free to open a pull request or issue on the repository.
