@@ -37,7 +37,7 @@ Welcome to the Blog Manager Application! This full-stack application is built wi
 
 - Node.js
 - PostgreSQL and Prisma
-- Github account for CUD operations (Ceate, Update, Delete) 
+- Github account for CUD operations (Create, Update, Delete) 
 
 ### Installation
 
@@ -48,7 +48,7 @@ Follow the steps below to set up and run the application:
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/blog-manager.git
+git clone https://github.com/fahiid33/SimpleBlogManager.git
 cd blog-manager
 ```
 
@@ -154,3 +154,7 @@ npm run dev
 Access the application: Once the application is running, you can access it at http://localhost:3000.
 
 For any issues or contributions, feel free to open a pull request or issue on the repository.
+
+### Hint :
+
+the domain in about section of the repository will only show you the website you will not be able to do CRUD operations e.g interact with the database, it's just a preview of what the website is looking like
