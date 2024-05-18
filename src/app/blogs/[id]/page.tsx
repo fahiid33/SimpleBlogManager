@@ -1,30 +1,33 @@
 import BlogDetailsHome from "@/components/blogs/blog-details";
+import { Blog } from "@/utils/types";
+import { PrismaClient } from "@prisma/client";
+
+const prisma = new PrismaClient();
 
 interface Param {
   id: string;
 }
 
 async function extractBlogDetails(id: string) {
-  const res = await fetch(
-    `${process.env.URL}/api/blog-post/blog-details?blogID=${id}`,
-    {
-      method: "GET",
-      next : {
-        revalidate : 0
-      }
-    }
-  );
-
-  const data = await res.json();
-  console.log(data, "data1234444");
-
-  if (data.success) return data.data;
+  let blogPost = null;
+  try {
+    blogPost = await prisma.post.findUnique({
+      where: {
+        id: parseInt(id),
+      },
+    });
+    console.log("Fetched posts:", blogPost); // Log fetched posts
+  } catch (e) {
+    console.error("Failed to fetch blog posts", e);
+    return null;
+  }
+  return blogPost;
 }
 
 export default async function BlogDetails({ params }: { params: Param }) {
   const { id } = params;
 
-  const blogData = await extractBlogDetails(id);
+  const blogData = await extractBlogDetails(id) as Blog;
 
   return <BlogDetailsHome blogData={blogData} />;
 }

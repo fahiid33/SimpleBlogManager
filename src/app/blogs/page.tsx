@@ -1,29 +1,20 @@
 import BlogList from "@/components/blogs/blog-list";
+import { PrismaClient } from "@prisma/client";
+
+const prisma = new PrismaClient();
 
 async function extractAllBlogs() {
+  let posts = [];
   try {
-    const res = await fetch(`${process.env.URL}/api/blog-post/get-all-posts`, {
-      method: "GET",
-      cache: "no-store",
-    });
-
-    if (!res.ok) {
-      console.error("Network response was not ok", res.statusText);
-      return [];
+     posts = await prisma.post.findMany();
+    console.log("Fetched posts:", posts); // Log fetched posts
     }
 
-    const data = await res.json();
-    console.log("Fetched data:", data); // Log fetched data
-
-    if (data.success) return data.data;
-    else {
-      console.error("API response indicates failure", data);
-      return [];
-    }
-  } catch (e) {
+   catch (e) {
     console.error("Failed to fetch blog posts", e);
     return [];
   }
+  return posts;
 }
 
 export default async function Blogs() {
