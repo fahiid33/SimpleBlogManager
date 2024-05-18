@@ -2,19 +2,28 @@ import BlogList from "@/components/blogs/blog-list";
 
 async function extractAllBlogs() {
   try {
-  const res = await fetch(`${process.env.URL}/api/blog-post/get-all-posts`, {
-    method: "GET",
-    cache: "no-store",
-  });
+    const res = await fetch(`${process.env.URL}/api/blog-post/get-all-posts`, {
+      method: "GET",
+      cache: "no-store",
+    });
 
-  const data = await res.json();
+    if (!res.ok) {
+      console.error("Network response was not ok", res.statusText);
+      return [];
+    }
 
-  if (data.success) return data.data;
+    const data = await res.json();
+    console.log("Fetched data:", data); // Log fetched data
+
+    if (data.success) return data.data;
+    else {
+      console.error("API response indicates failure", data);
+      return [];
+    }
+  } catch (e) {
+    console.error("Failed to fetch blog posts", e);
+    return [];
   }
-  catch (e) {
-    console.log(e);
-  }
-
 }
 
 export default async function Blogs() {
