@@ -181,7 +181,7 @@ For any issues or contributions, feel free to open a pull request or issue on th
 
 
 
-### Hint :
+[!NOTE]
 
-the domain in about section of the repository will only show you the website you will not be able to do CRUD operations e.g interact with the database, it's just a preview of what the website is looking like
+the domain in about section of the repository will only show you how website look, you will not be able to do CRUD operations e.g interact with the database, it's just a preview of what the website is looking like
 (in progress ...)
